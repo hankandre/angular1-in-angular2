@@ -13,6 +13,15 @@ class CategoriesModel {
     getCategories(){
         return this.$q.when(this.categories);
     }
+
+    setCurrentCategory(category) {
+        return this.currentCategory = category;
+    }
+
+    getCurrentCategory() {
+        console.log('THIS', this);
+        return this.currentCategory;
+    }
 }
 
 export default CategoriesModel;

@@ -2,7 +2,8 @@
 	<img class="logo" src="assets/img/eggly-logo.png">
 </span>
 <ul class="nav nav-sidebar">
-	<li ng-repeat="category in categoriesListCtrl.categories">
+	<li ng-repeat="category in categoriesListCtrl.categories"
+		ng-class="{'active':categoriesListCtrl.isCurrentCategory(category)}">
 		<category-item 
 		selected="categoriesListCtrl.onCategorySelected(category)" 
 		category="category"></category-item>
